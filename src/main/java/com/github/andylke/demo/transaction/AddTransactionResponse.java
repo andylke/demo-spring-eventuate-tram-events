@@ -5,13 +5,13 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 public class AddTransactionResponse {
 
+  private Long id;
+
   public AddTransactionResponse() {}
 
-  public AddTransactionResponse(Transaction transaction) {
-    this.id = transaction.getId();
+  public AddTransactionResponse(Long id) {
+    this.id = id;
   }
-
-  private Long id;
 
   public Long getId() {
     return id;

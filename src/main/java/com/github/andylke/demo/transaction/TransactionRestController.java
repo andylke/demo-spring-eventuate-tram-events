@@ -13,7 +13,8 @@ public class TransactionRestController {
   @Autowired private TransactionService service;
 
   @PostMapping
-  public AddTransactionResponse createOrder(@RequestBody AddTransactionRequest request) {
-    return service.addTransaction(request);
+  public AddTransactionResponse addTransaction(@RequestBody AddTransactionRequest request) {
+    final Transaction added = service.addTransaction(request.getDetails());
+    return new AddTransactionResponse(added.getId());
   }
 }

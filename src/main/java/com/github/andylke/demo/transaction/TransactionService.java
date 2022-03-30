@@ -17,9 +17,8 @@ public class TransactionService {
   @Autowired private DomainEventPublisher domainEventPublisher;
 
   @Transactional
-  public AddTransactionResponse addTransaction(AddTransactionRequest request) {
-    final Transaction entity = new Transaction(request.getDetails());
-
+  public Transaction addTransaction(TransactionDetails transactionDetails) {
+    final Transaction entity = new Transaction(transactionDetails);
     final Transaction savedEntity = repository.save(entity);
 
     domainEventPublisher.publish(
@@ -27,6 +26,6 @@ public class TransactionService {
         savedEntity.getId(),
         Collections.singletonList(new TransactionAddedEvent(savedEntity.getDetails())));
 
-    return new AddTransactionResponse(savedEntity);
+    return savedEntity;
   }
 }
