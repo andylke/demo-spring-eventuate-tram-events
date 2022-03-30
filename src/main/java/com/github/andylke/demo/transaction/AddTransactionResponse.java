@@ -7,8 +7,8 @@ public class AddTransactionResponse {
 
   public AddTransactionResponse() {}
 
-  public AddTransactionResponse(Transaction order) {
-    this.id = order.getId();
+  public AddTransactionResponse(Transaction transaction) {
+    this.id = transaction.getId();
   }
 
   private Long id;

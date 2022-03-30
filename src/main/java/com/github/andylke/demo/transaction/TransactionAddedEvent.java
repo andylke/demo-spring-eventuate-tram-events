@@ -7,20 +7,20 @@ import io.eventuate.tram.events.common.DomainEvent;
 
 public class TransactionAddedEvent implements DomainEvent {
 
-  private TransactionDetails orderDetails;
+  private TransactionDetails transactionDetails;
 
   public TransactionAddedEvent() {}
 
-  public TransactionAddedEvent(TransactionDetails orderDetails) {
-    this.orderDetails = orderDetails;
+  public TransactionAddedEvent(TransactionDetails transactionDetails) {
+    this.transactionDetails = transactionDetails;
   }
 
-  public TransactionDetails getOrderDetails() {
-    return orderDetails;
+  public TransactionDetails getTransactionDetails() {
+    return transactionDetails;
   }
 
-  public void setOrderDetails(TransactionDetails orderDetails) {
-    this.orderDetails = orderDetails;
+  public void setTransactionDetails(TransactionDetails transactionDetails) {
+    this.transactionDetails = transactionDetails;
   }
 
   @Override
