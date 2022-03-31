@@ -6,7 +6,7 @@ public class AddTransactionRequest {
 
   private Long customerId;
 
-  private BigDecimal totalAmount;
+  private BigDecimal transactionAmount;
 
   public Long getCustomerId() {
     return customerId;
@@ -16,11 +16,11 @@ public class AddTransactionRequest {
     this.customerId = customerId;
   }
 
-  public BigDecimal getTotalAmount() {
-    return totalAmount;
+  public BigDecimal getTransactionAmount() {
+    return transactionAmount;
   }
 
-  public void setTotalAmount(BigDecimal totalAmount) {
-    this.totalAmount = totalAmount;
+  public void setTransactionAmount(BigDecimal transactionAmount) {
+    this.transactionAmount = transactionAmount;
   }
 }

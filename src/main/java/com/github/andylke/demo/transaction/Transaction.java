@@ -12,18 +12,18 @@ public class Transaction {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+  private Long transactionId;
 
   private Long customerId;
 
-  private BigDecimal totalAmount;
+  private BigDecimal transactionAmount;
 
-  public Long getId() {
-    return id;
+  public Long getTransactionId() {
+    return transactionId;
   }
 
-  public void setId(Long id) {
-    this.id = id;
+  public void setTransactionId(Long transactionId) {
+    this.transactionId = transactionId;
   }
 
   public Long getCustomerId() {
@@ -34,11 +34,11 @@ public class Transaction {
     this.customerId = customerId;
   }
 
-  public BigDecimal getTotalAmount() {
-    return totalAmount;
+  public BigDecimal getTransactionAmount() {
+    return transactionAmount;
   }
 
-  public void setTotalAmount(BigDecimal totalAmount) {
-    this.totalAmount = totalAmount;
+  public void setTransactionAmount(BigDecimal transactionAmount) {
+    this.transactionAmount = transactionAmount;
   }
 }

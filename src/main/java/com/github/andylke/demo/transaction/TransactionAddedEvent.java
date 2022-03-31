@@ -1,5 +1,7 @@
 package com.github.andylke.demo.transaction;
 
+import org.apache.commons.lang.builder.ToStringBuilder;
+
 import io.eventuate.tram.events.common.DomainEvent;
 
 public class TransactionAddedEvent implements DomainEvent {
@@ -18,5 +20,10 @@ public class TransactionAddedEvent implements DomainEvent {
 
   public void setResponse(AddTransactionResponse response) {
     this.response = response;
+  }
+
+  @Override
+  public String toString() {
+    return ToStringBuilder.reflectionToString(response);
   }
 }

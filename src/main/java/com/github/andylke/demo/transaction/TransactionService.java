@@ -29,7 +29,7 @@ public class TransactionService {
 
     domainEventPublisher.publish(
         "spring-boot-eventuate-tram-events.transaction",
-        savedEntity.getId(),
+        savedEntity.getTransactionId(),
         Collections.singletonList(new TransactionAddedEvent(response)));
 
     return response;
