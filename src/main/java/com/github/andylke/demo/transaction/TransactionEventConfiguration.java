@@ -13,15 +13,15 @@ import io.eventuate.tram.spring.events.subscriber.TramEventSubscriberConfigurati
 public class TransactionEventConfiguration {
 
   @Bean
-  public TransactionEventConsumer orderEventConsumer() {
+  public TransactionEventConsumer transactionEventConsumer() {
     return new TransactionEventConsumer();
   }
 
   @Bean
-  public DomainEventDispatcher orderEventDispatcher(
-      TransactionEventConsumer orderEventConsumer,
+  public DomainEventDispatcher transactionEventDispatcher(
+      TransactionEventConsumer transactionEventConsumer,
       DomainEventDispatcherFactory domainEventDispatcherFactory) {
     return domainEventDispatcherFactory.make(
-        "orderServiceEvents", orderEventConsumer.domainEventHandlers());
+        "transactionServiceEvent", transactionEventConsumer.domainEventHandlers());
   }
 }
