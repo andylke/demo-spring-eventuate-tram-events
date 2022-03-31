@@ -14,7 +14,6 @@ public class TransactionRestController {
 
   @PostMapping
   public AddTransactionResponse addTransaction(@RequestBody AddTransactionRequest request) {
-    final Transaction added = service.addTransaction(request.getDetails());
-    return new AddTransactionResponse(added.getId());
+    return service.addTransaction(request);
   }
 }

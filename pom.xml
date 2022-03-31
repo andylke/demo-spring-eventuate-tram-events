@@ -16,6 +16,7 @@
 	<properties>
 		<java.version>11</java.version>
     <eventuate-platform-dependencies.version>2021.3.RELEASE</eventuate-platform-dependencies.version>
+    <modelmapper.version>3.1.0</modelmapper.version>
 	</properties>
   <dependencyManagement>
     <dependencies>
@@ -58,6 +59,11 @@
       <groupId>io.eventuate.tram.core</groupId>
       <artifactId>eventuate-tram-spring-events-publisher-starter</artifactId>
     </dependency>    
+    <dependency>
+      <groupId>org.modelmapper</groupId>
+      <artifactId>modelmapper</artifactId>
+      <version>${modelmapper.version}</version>
+    </dependency>
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>

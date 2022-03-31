@@ -1,17 +1,14 @@
 package com.github.andylke.demo.transaction;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
+import java.math.BigDecimal;
 
 public class AddTransactionResponse {
 
   private Long id;
 
-  public AddTransactionResponse() {}
+  private Long customerId;
 
-  public AddTransactionResponse(Long id) {
-    this.id = id;
-  }
+  private BigDecimal totalAmount;
 
   public Long getId() {
     return id;
@@ -21,8 +18,19 @@ public class AddTransactionResponse {
     this.id = id;
   }
 
-  @Override
-  public String toString() {
-    return ToStringBuilder.reflectionToString(this, ToStringStyle.NO_CLASS_NAME_STYLE);
+  public Long getCustomerId() {
+    return customerId;
+  }
+
+  public void setCustomerId(Long customerId) {
+    this.customerId = customerId;
+  }
+
+  public BigDecimal getTotalAmount() {
+    return totalAmount;
+  }
+
+  public void setTotalAmount(BigDecimal totalAmount) {
+    this.totalAmount = totalAmount;
   }
 }

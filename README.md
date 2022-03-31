@@ -94,4 +94,4 @@ Start MySQL with
 ```
 
 
-`curl -X POST --header "Content-Type: application/json" -d '{ "details": { "customerId": "1", "totalAmount": 111.11 } }' http://localhost:8080/transactions`
+`curl -X POST --header "Content-Type: application/json" -d '{ "customerId": "1", "totalAmount": 111.11 }' http://localhost:8080/transactions`
