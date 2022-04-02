@@ -12,7 +12,7 @@ public class TransactionEventConsumer {
   private static final Logger LOGGER = LoggerFactory.getLogger(TransactionEventConsumer.class);
 
   public DomainEventHandlers domainEventHandlers() {
-    return new DomainEventHandlersBuilder("spring-boot-eventuate-tram-events.transaction")
+    return new DomainEventHandlersBuilder("spring-boot-eventuate-tram-events.transaction-event")
         .onEvent(TransactionAddedEvent.class, this::handleTransactionAdded)
         .build();
   }

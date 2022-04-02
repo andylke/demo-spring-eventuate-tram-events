@@ -28,7 +28,7 @@ public class TransactionService {
         modelMapper.map(savedEntity, AddTransactionResponse.class);
 
     domainEventPublisher.publish(
-        "spring-boot-eventuate-tram-events.transaction",
+        "spring-boot-eventuate-tram-events.transaction-event",
         savedEntity.getTransactionId(),
         Collections.singletonList(new TransactionAddedEvent(response)));
 
